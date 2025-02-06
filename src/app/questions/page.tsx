@@ -10,7 +10,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 
-const Page = async ({searchParams}: {searchParams: {page?: string, search?: string, tag?: string}}) => {
+const Page = async ({searchParams}: {searchParams: Promise<{page?: string, search?: string, tag?: string}>}) => {
     const {page, search, tag} = await searchParams
     const Apage = page || "1"
     const limit = 20

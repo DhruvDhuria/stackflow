@@ -7,7 +7,7 @@ import Link from 'next/link'
 import slugify from '@/utils/slugify'
 import Pagination from '@/components/Pagination'
 
-const page = async ({params, searchParams}: {params: {userId: string, userSlug: string}, searchParams: {page?: string}}) => {
+const page = async ({params, searchParams}: {params: Promise<{userId: string, userSlug: string}>, searchParams: Promise<{page?: string}>}) => {
 
     const { userId } = await params;
     let { page } = await searchParams;

@@ -19,7 +19,7 @@ import { MarkDownPreview } from "@/components/RTE";
 
 
 
-const Page = async ({params}: {params: {quesId: string, quesName: string}}) => {
+const Page = async ({params}: {params: Promise<{quesId: string, quesName: string}>}) => {
 
   const {quesId} = await params
 

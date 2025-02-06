@@ -7,7 +7,7 @@ import { UserPrefs } from '@/store/Auth'
 import QuestionCard from '@/components/QuestionCard'
 import Pagination from '@/components/Pagination'
 
-const Page = async ({params, searchParams}: {params: {userId: string, userSlug: string}, searchParams: {page?: string}},) => {
+const Page = async ({params, searchParams}: {params: Promise<{userId: string, userSlug: string}>, searchParams: Promise<{page?: string}>},) => {
 
     let {page} = await searchParams
     page = page || "1"
