@@ -1,8 +1,7 @@
 import React from 'react'
 import { answerCollection, db, questionCollection, voteCollection } from '@/models/name'
 import { databases } from '@/models/server/config'
-import { AppwriteException, Query } from 'node-appwrite'
-import { get } from 'http'
+import {  Query } from 'node-appwrite'
 import Pagination from '@/components/Pagination'
 import convertDateToRelativeTime from '@/utils/relativeTime'
 import Link from 'next/link'
@@ -12,7 +11,8 @@ import slugify from '@/utils/slugify'
 const page = async ({params, searchParams}: {params: {userId: string, userSlug: string}, searchParams: {page?: string, voteStatus?: "upvoted" | "downvoted"}}) => {
 
     const {userId} = await params
-    let {page, voteStatus} = await searchParams
+    let {page} = await searchParams
+    const {voteStatus} = await searchParams
 
     page = page || "1"
     const query = [

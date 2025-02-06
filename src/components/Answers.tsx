@@ -1,9 +1,8 @@
 "use client"
 
 import React, {useState} from "react"
-import { answerCollection, db } from "@/models/name"
-import { databases, avatars } from "@/models/client/config"
-import {ID, Models} from "appwrite"
+import {  avatars } from "@/models/client/config"
+import { Models} from "appwrite"
 import slugify from "@/utils/slugify"
 import RTE, {MarkDownPreview} from "./RTE"
 import { useAuthStore } from "@/store/Auth";

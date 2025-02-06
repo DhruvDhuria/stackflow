@@ -1,6 +1,5 @@
 import Answers from "@/components/Answers";
 import Comments from "@/components/Comments";
-import { useAuthStore } from "@/store/Auth";
 import {db, questionCollection, answerCollection, voteCollection, commentCollection, questionAttachmentBucket} from "@/models/name";
 import slugify from "@/utils/slugify";
 import convertDateToRelativeTime from "@/utils/relativeTime";
@@ -17,8 +16,6 @@ import Link from "next/link";
 import { Query } from "appwrite";
 import VoteButtons from "@/components/VoteButtons";
 import { MarkDownPreview } from "@/components/RTE";
-import { IconEdit } from "@tabler/icons-react";
-import { useRouter } from "next/navigation";
 
 
 
@@ -66,7 +63,7 @@ const Page = async ({params}: {params: {quesId: string, quesName: string}}) => {
     }
     
 
-    let previewImg;
+    
     
     const author = await users.get<UserPrefs>(question.authorId);
     [comments.documents, answers.documents] = await Promise.all([

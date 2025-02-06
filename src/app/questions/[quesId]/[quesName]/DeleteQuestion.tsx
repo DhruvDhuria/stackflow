@@ -2,7 +2,7 @@
 
 import { useAuthStore } from "@/store/Auth"
 import { databases } from "@/models/client/config"
-import { answerCollection, db, questionCollection, voteCollection } from "@/models/name"
+import { db, questionCollection, voteCollection } from "@/models/name"
 import { useRouter } from "next/navigation"
 import { IconTrash } from "@tabler/icons-react"
 

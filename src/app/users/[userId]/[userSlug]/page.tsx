@@ -1,7 +1,6 @@
 
 import React from 'react'
 import { MagicCard } from '@/components/ui/magic-card';
-import { useParams } from 'next/navigation';
 import { users,databases } from '@/models/server/config';
 import { UserPrefs } from '@/store/Auth';
 import { answerCollection, db, questionCollection } from '@/models/name';

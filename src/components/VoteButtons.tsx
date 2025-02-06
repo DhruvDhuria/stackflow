@@ -3,7 +3,7 @@
 import { useAuthStore } from "@/store/Auth";
 import { databases } from "@/models/client/config";
 import { voteCollection, db } from "@/models/name";
-import { ID, Models, Query } from "appwrite";
+import {  Models, Query } from "appwrite";
 import React from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
